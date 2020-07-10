@@ -1203,6 +1203,18 @@
     tslib "^1.10.0"
     zone.js "^0.10.3"
 
+"@scullyio/scully-plugin-base-href-rewrite@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@scullyio/scully-plugin-base-href-rewrite/-/scully-plugin-base-href-rewrite-0.0.2.tgz#4e207ca2c8e76c8a293145ce0a3b2fba50b3c1bb"
+  integrity sha512-BBQxaWp5ljH6mlRo1x0vSw8r8ReQag9PlmpZo+ghEOmeU/CSgtn4KOu+3opp6RiVqrSg5S+cR/GQidWMEx/5AA==
+  dependencies:
+    chalk "^4.1.0"
+    compression "^1.7.4"
+    cors "^2.8.5"
+    jsdom "^16.2.2"
+    rxjs "^6.5.5"
+    ws "^7.3.0"
+
 "@scullyio/scully@latest":
   version "0.0.99"
   resolved "https://registry.yarnpkg.com/@scullyio/scully/-/scully-0.0.99.tgz#01d3f73af6999d5083502cbd0a21f71307c7d587"

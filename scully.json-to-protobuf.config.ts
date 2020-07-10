@@ -1,8 +1,15 @@
-import { ScullyConfig } from '@scullyio/scully';
+import { ScullyConfig, setPluginConfig } from '@scullyio/scully'
+import { baseHrefRewrite } from '@scullyio/scully-plugin-base-href-rewrite'
+
+const defaultPostRenderers = ['seoHrefOptimise', baseHrefRewrite]
+setPluginConfig(baseHrefRewrite, {
+  href: '/json-to-protobuf',
+})
+
 export const config: ScullyConfig = {
-  projectRoot: "./src",
-  projectName: "json-to-protobuf",
+  defaultPostRenderers,
+  projectRoot: './src',
+  projectName: 'json-to-protobuf',
   outDir: './dist/static',
-  routes: {
-  }
-};
+  routes: {},
+}
