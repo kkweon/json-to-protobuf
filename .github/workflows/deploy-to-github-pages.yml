@@ -20,9 +20,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v2.3.1
+      - run: yarn && yarn build
       - uses: crazy-max/ghaction-github-pages@v2.1.0
         with:
-          build_dr: ./dist/json-to-protobuf
+          build_dir: ./dist/json-to-protobuf
           jekyll: false
 
         
