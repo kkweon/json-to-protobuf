@@ -9,7 +9,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "format": "prettier --write \"{src,e2e}/**/*.{js,ts,html,scss,json}\" \"*.{json,js,yml,md}\""
+    "format": "prettier --write \"{src,e2e}/**/*.{js,ts,html,scss,json}\" \"*.{json,js,yml,md}\"",
+    "scully": "scully",
+    "scully:serve": "scully serve"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +23,9 @@
     "@angular/platform-browser": "~10.0.2",
     "@angular/platform-browser-dynamic": "~10.0.2",
     "@angular/router": "~10.0.2",
+    "@scullyio/init": "^0.0.29",
+    "@scullyio/ng-lib": "latest",
+    "@scullyio/scully": "latest",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
