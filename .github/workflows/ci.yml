@@ -21,7 +21,7 @@ jobs:
     - run: yarn test --no-watch --no-progress --browsers=ChromeHeadlessCI
     - run: yarn e2e --protractor-config=e2e/protractor-ci.conf.js
     - uses: crazy-max/ghaction-github-pages@v2.1.0
-      if: ${{ github.event == push }}
+      if: ${{ github.event_name == 'push' }}
       with:
         build_dir: ./dist/json-to-protobuf
         jekyll: false
