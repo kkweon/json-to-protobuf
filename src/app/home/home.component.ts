@@ -10,13 +10,16 @@ import { map } from 'rxjs/operators'
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  jsonTextField = new FormControl('')
+  jsonTextField = new FormControl(`{
+  "name": "Mo Kweon",
+  "age": 18
+}`)
   outputField$: Observable<string>
   constructor(private jsonProtoAdapterService: JsonProtoAdapterService) {}
 
   ngOnInit(): void {
     this.outputField$ = this.jsonTextField.valueChanges.pipe(
-      map((value) => {
+      map(value => {
         try {
           return this.jsonProtoAdapterService.getProtoDefinitionFromJson(value)
         } catch (e) {
