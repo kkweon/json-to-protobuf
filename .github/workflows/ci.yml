@@ -16,14 +16,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: yarn
-    - run: yarn build:gh-pages
+    - run: yarn build:gh-pages && yarn scully
     - run: yarn lint
     - run: yarn test --no-watch --no-progress --browsers=ChromeHeadlessCI
     - run: yarn e2e --protractor-config=e2e/protractor-ci.conf.js
     - uses: crazy-max/ghaction-github-pages@v2.1.0
       if: ${{ github.event_name == 'push' }}
       with:
-        build_dir: ./dist/json-to-protobuf
+        build_dir: ./dist/static
         jekyll: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
