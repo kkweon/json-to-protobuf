@@ -24,7 +24,11 @@ describe('HomeComponent', () => {
     expect(component).toBeTruthy()
   })
 
-  it('should have JSON input <textarea /> with the default value', () => {
+  it('should have JSON input <textarea /> with the default value', (done) => {
+    component.outputField$.subscribe((value) => {
+      expect(value).toBeTruthy()
+      done()
+    })
     expect(component.jsonTextField).toBeInstanceOf(FormControl)
     expect(component.jsonTextField.value).toBeTruthy()
   })
