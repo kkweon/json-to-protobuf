@@ -1,13 +1,24 @@
-<p>home works!</p>
+<div class="home">
+  <h1 class="mat-display-2">Convert JSON to Protobuf Definition!</h1>
+  <mat-grid-list cols="2">
+    <mat-grid-tile>
+      <mat-form-field>
+        <mat-label>Type JSON</mat-label>
+        <textarea
+          class="home__input"
+          [formControl]="jsonTextField"
+          matInput
+        ></textarea>
+      </mat-form-field>
+    </mat-grid-tile>
 
-<textarea
-  id="jsonschema-textarea"
-  name="jsonschema-textarea"
-  cols="30"
-  rows="10"
-  [formControl]="jsonTextField"
-></textarea>
-
-<textarea cols="30" rows="10" readonly="true">{{
-  outputField$ | async
-}}</textarea>
+    <mat-grid-tile>
+      <mat-form-field>
+        <mat-label>Proto Definition</mat-label>
+        <textarea class="home__output" readonly="true" matInput>{{
+          outputField$ | async
+        }}</textarea>
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

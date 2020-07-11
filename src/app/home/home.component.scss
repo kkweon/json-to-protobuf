@@ -1,0 +1,57 @@
+// Import theming functions
+@import '~@angular/material/theming';
+
+mat-grid-list {
+  width: 100%;
+}
+
+mat-form-field {
+  width: 100%;
+  height: 100%;
+}
+
+textarea.home__input,
+textarea.home__output {
+  width: 100%;
+  min-height: 50vh;
+  resize: none;
+
+  padding: 1rem;
+}
+
+@mixin home-color($config-or-theme) {
+  // Extract the color configuration in case a theme has been passed.
+  // This allows consumers to either pass a theme object or a color configuration.
+  $config: mat-get-color-config($config-or-theme);
+  $primary: map-get($config, primary);
+  $accent: map-get($config, accent);
+  $foreground: map-get($config, foreground);
+
+  .home__output {
+    background-color: mat-color($primary, 50);
+    color: mat-color($primary, '50-contrast');
+  }
+}
+
+@mixin home-typography($config-or-theme) {
+  $config: mat-get-typography-config($config-or-theme);
+
+  .home__output {
+    font: {
+      size: mat-font-size($config, body-1);
+    }
+  }
+}
+
+@mixin home-theme($theme) {
+  $color: mat-get-color-config($theme);
+  $typography: mat-get-typography-config($theme);
+
+  @if $color != null {
+    @include home-color($color);
+  }
+
+  @if $typography != null {
+    @include home-typography($typography);
+  }
+}

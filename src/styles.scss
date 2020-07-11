@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+
+// always include only once per project
+@include mat-core();
+
+// import our custom theme
+@import 'theme';
+
+@import 'app/home/home.component';
+
+@mixin custom-components-theme($theme) {
+  @include home-theme($theme);
+}
+
+// specify theme class eg: <body class="my-theme"> ... </body>
+.app-theme {
+  // use our theme with angular-material-theme mixin
+  @include angular-material-theme($app-theme);
+  @include custom-components-theme($app-theme);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
