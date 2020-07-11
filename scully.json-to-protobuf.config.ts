@@ -3,7 +3,7 @@ import { baseHrefRewrite } from '@scullyio/scully-plugin-base-href-rewrite'
 
 const defaultPostRenderers = ['seoHrefOptimise', baseHrefRewrite]
 setPluginConfig(baseHrefRewrite, {
-  href: '/json-to-protobuf',
+  href: '/json-to-protobuf/',
 })
 
 export const config: ScullyConfig = {

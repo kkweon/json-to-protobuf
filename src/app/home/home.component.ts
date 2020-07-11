@@ -10,17 +10,16 @@ import { map } from 'rxjs/operators'
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  jsonTextField: FormControl
+  jsonTextField = new FormControl(`{
+  "name": "Mo Kweon",
+  "age": 18
+}`)
+
   outputField$: Observable<string>
 
   constructor(private jsonProtoAdapterService: JsonProtoAdapterService) {}
 
   ngOnInit(): void {
-    this.jsonTextField = new FormControl(`{
-  "name": "Mo Kweon",
-  "age": 18
-}`)
-
     this.outputField$ = merge(
       of(this.jsonTextField.value),
       this.jsonTextField.valueChanges,
