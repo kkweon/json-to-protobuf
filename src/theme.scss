@@ -11,3 +11,9 @@ $app-theme: mat-light-theme(
   $app-theme-accent,
   $app-theme-warn
 );
+
+$app-dark-theme: mat-dark-theme(
+  mat-palette($mat-blue-grey),
+  mat-palette($mat-amber),
+  mat-palette($mat-deep-orange)
+);

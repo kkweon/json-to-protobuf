@@ -20,6 +20,12 @@
   @include custom-components-theme($app-theme);
 }
 
+.app-dark-theme {
+  // use our theme with angular-material-theme mixin
+  @include angular-material-theme($app-dark-theme);
+  @include custom-components-theme($app-dark-theme);
+}
+
 *,
 *:before,
 *:after {

@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<div [ngClass]="theme" class="mat-app-background">
+  <mat-toolbar color="primary">
+    <div class="toolbar__header">
+      <span>JSON to Protobuf</span>
+      <mat-slide-toggle [checked]="isDarkTheme()" (toggleChange)="onChange()"
+        >Dark Theme</mat-slide-toggle
+      >
+    </div>
+  </mat-toolbar>
+  <div class="app">
+    <router-outlet></router-outlet>
+  </div>
+</div>

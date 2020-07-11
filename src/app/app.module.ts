@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatToolbarModule } from '@angular/material/toolbar'
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -22,6 +24,8 @@ import { MatInputModule } from '@angular/material/input'
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSlideToggleModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
