@@ -10,7 +10,10 @@ import { map } from 'rxjs/operators'
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  jsonTextField = new FormControl('')
+  jsonTextField = new FormControl(`{
+  "name": "Mo Kweon",
+  "age": 18
+}`)
   outputField$: Observable<string>
   constructor(private jsonProtoAdapterService: JsonProtoAdapterService) {}
 
