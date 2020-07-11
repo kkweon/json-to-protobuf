@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing'
+import { FormControl } from '@angular/forms'
 
 import { HomeComponent } from './home.component'
 
@@ -20,5 +21,9 @@ describe('HomeComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy()
+  })
+
+  it('should have JSON input <textarea />', () => {
+    expect(component.jsonTextField).toBeInstanceOf(FormControl)
   })
 })
