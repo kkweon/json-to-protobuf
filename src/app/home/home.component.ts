@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.outputField$ = this.jsonTextField.valueChanges.pipe(
-      map(value => {
+      map((value) => {
         try {
           return this.jsonProtoAdapterService.getProtoDefinitionFromJson(value)
         } catch (e) {

@@ -29,8 +29,8 @@ describe('HomeComponent', () => {
     expect(component.jsonTextField.value).toBeTruthy()
   })
 
-  it('should have parse JSON input to proto', done => {
-    component.outputField$.subscribe(value => {
+  it('should have parse JSON input to proto', (done) => {
+    component.outputField$.subscribe((value) => {
       expect(value).toContain(`optional string name = 1;`)
       done()
     })
