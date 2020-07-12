@@ -17,8 +17,8 @@ import { MatToolbarModule } from '@angular/material/toolbar'
   declarations: [AppComponent, HomeComponent],
   imports: [
     AppRoutingModule,
-    BrowserAnimationsModule,
     BrowserModule,
+    BrowserAnimationsModule,
     MatFormFieldModule,
     MatGridListModule,
     MatInputModule,
