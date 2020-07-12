@@ -1,5 +1,11 @@
 # JsonToProtobuf
 
+![ci](https://github.com/kkweon/json-to-protobuf/workflows/ci/badge.svg)
+[![codecov](https://codecov.io/gh/kkweon/json-to-protobuf/branch/master/graph/badge.svg)](https://codecov.io/gh/kkweon/json-to-protobuf)
+[![Maintainability](https://api.codeclimate.com/v1/badges/daf98a1dc137c362b502/maintainability)](https://codeclimate.com/github/kkweon/json-to-protobuf/maintainability)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/kkweon/json-to-protobuf.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/kkweon/json-to-protobuf/context:javascript)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/kkweon/json-to-protobuf.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/kkweon/json-to-protobuf/alerts/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
 ## Development server
