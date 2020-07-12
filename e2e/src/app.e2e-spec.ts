@@ -9,7 +9,7 @@ describe('workspace-project App', () => {
   })
 
   it('should contain <textarea> tag', async () => {
-    page.navigateTo()
+    await page.navigateTo()
     expect(await page.getInputTextArea().getTagName()).toBe('textarea')
   })
 
