@@ -12,6 +12,8 @@ import { MatGridListModule } from '@angular/material/grid-list'
 import { MatInputModule } from '@angular/material/input'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatToolbarModule } from '@angular/material/toolbar'
+import { ServiceWorkerModule } from '@angular/service-worker'
+import { environment } from '../environments/environment'
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -26,6 +28,9 @@ import { MatToolbarModule } from '@angular/material/toolbar'
     MatToolbarModule,
     ReactiveFormsModule,
     ScullyLibModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
