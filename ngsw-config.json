@@ -1,17 +1,17 @@
 {
   "$schema": "./node_modules/@angular/service-worker/config/schema.json",
-  "index": "/index.html",
+  "index": "/json-to-protobuf/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "resources": {
         "files": [
-          "/favicon.ico",
-          "/index.html",
-          "/manifest.webmanifest",
-          "/*.css",
-          "/*.js"
+          "/json-to-protobuf/favicon.ico",
+          "/json-to-protobuf/index.html",
+          "/json-to-protobuf/manifest.webmanifest",
+          "/json-to-protobuf/*.css",
+          "/json-to-protobuf/*.js"
         ]
       }
     },
