@@ -1,25 +1,23 @@
-<div [ngClass]='theme' class='mat-app-background'>
-  <mat-toolbar color='primary'>
-    <div class='toolbar__header'>
+<div [ngClass]="theme" class="mat-app-background">
+  <mat-toolbar color="primary">
+    <div class="toolbar__header">
       <span>JSON to Protobuf</span>
-      <button mat-icon-button [matMenuTriggerFor]='menu' aria-label='menu'>
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu">
         <mat-icon>more_vert</mat-icon>
       </button>
-      <mat-menu #menu='matMenu'>
-        <button mat-menu-item (click)='onChange()'>
-          <mat-icon>{{
-            isDarkTheme() ? 'dark_mode' : 'light_mode'
-            }}</mat-icon>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="onChange()">
+          <mat-icon>{{ isDarkTheme() ? 'dark_mode' : 'light_mode' }}</mat-icon>
           <span>Dark/Light mode switch</span>
         </button>
-        <button mat-menu-item (click)='toggleProtoVersion()'>
-          <mat-icon>{{ (useProto3$ | async) ? "checkbox" : null }}</mat-icon>
+        <button mat-menu-item (click)="toggleProtoVersion()">
+          <mat-icon>{{ (useProto3$ | async) ? 'checkbox' : null }}</mat-icon>
           <span>Use proto3</span>
         </button>
       </mat-menu>
     </div>
   </mat-toolbar>
-  <div class='app'>
+  <div class="app">
     <router-outlet></router-outlet>
   </div>
 </div>
