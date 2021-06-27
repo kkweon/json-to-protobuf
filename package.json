@@ -12,14 +12,10 @@
     "format": "prettier --write \"{src,e2e}/**/*.{js,ts,html,scss,json}\" \"*.{json,js,yml,md}\"",
     "scully": "scully",
     "scully:serve": "scully serve",
-    "debug:pwa": "rm -rf dist/json-to-protobuf && cp -r dist/static dist/json-to-protobuf && http-server dist"
+    "debug:pwa": "rm -rf dist/json-to-protobuf && cp -r dist/static dist/json-to-protobuf && http-server dist",
+    "prepare": "husky install"
   },
   "private": true,
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "dependencies": {
     "@angular/animations": "~12.1.0",
     "@angular/cdk": "^12.1.0",
