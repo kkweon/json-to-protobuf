@@ -14,6 +14,10 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { ServiceWorkerModule } from '@angular/service-worker'
 import { environment } from '../environments/environment'
+import { MatButtonModule } from '@angular/material/button'
+import { MatMenuModule } from '@angular/material/menu'
+import { MatIconModule } from '@angular/material/icon'
+import { MatSnackBarModule } from '@angular/material/snack-bar'
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -25,12 +29,16 @@ import { environment } from '../environments/environment'
     MatGridListModule,
     MatInputModule,
     MatSlideToggleModule,
+    MatSnackBarModule,
     MatToolbarModule,
     ReactiveFormsModule,
     ScullyLibModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

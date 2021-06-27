@@ -12,8 +12,12 @@
 
   <mat-form-field>
     <mat-label>Proto Definition</mat-label>
-    <textarea class="home__output" rows="20" readonly="true" matInput>{{
+    <textarea #output class="home__output" rows="20" readonly="true" matInput>{{
       outputField$ | async
     }}</textarea>
   </mat-form-field>
+
+  <button mat-icon-button class='home__copyButton' (click)='onCopyClick()'>
+    <mat-icon>content_paste</mat-icon>
+  </button>
 </div>

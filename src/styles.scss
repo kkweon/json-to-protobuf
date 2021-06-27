@@ -1,29 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/theming';
+@use "~@angular/material" as mat;
+@use 'theme' as theme;
+@use 'app/home/home.component' as home;
 
 // always include only once per project
-@include mat-core();
+@include mat.core();
 
-// import our custom theme
-@import 'theme';
-
-@import 'app/home/home.component';
 
 @mixin custom-components-theme($theme) {
-  @include home-theme($theme);
+  @include home.home-theme($theme);
 }
 
 // specify theme class eg: <body class="my-theme"> ... </body>
 .app-theme {
   // use our theme with angular-material-theme mixin
-  @include angular-material-theme($app-theme);
-  @include custom-components-theme($app-theme);
+  @include mat.all-component-themes(theme.$app-theme);
+  @include custom-components-theme(theme.$app-theme);
 }
 
 .app-dark-theme {
   // use our theme with angular-material-theme mixin
-  @include angular-material-theme($app-dark-theme);
-  @include custom-components-theme($app-dark-theme);
+  @include mat.all-component-themes(theme.$app-dark-theme);
+  @include custom-components-theme(theme.$app-dark-theme);
 }
 
 *,

@@ -1,5 +1,5 @@
-// Import theming functions
-@import '~@angular/material/theming';
+@use "sass:map";
+@use "~@angular/material" as mat;
 
 .home__input,
 .home__output {
@@ -10,7 +10,14 @@
   max-width: 100%;
 }
 
+.home__copyButton {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+}
+
 .home {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -28,25 +35,33 @@ mat-form-field {
 @mixin home-color($config-or-theme) {
   // Extract the color configuration in case a theme has been passed.
   // This allows consumers to either pass a theme object or a color configuration.
-  $config: mat-get-color-config($config-or-theme);
-  $primary: map-get($config, primary);
-  $accent: map-get($config, accent);
-  $foreground: map-get($config, foreground);
-  $background: map-get($config, background);
+  $config: mat.get-color-config($config-or-theme);
+  $primary: map.get($config, primary);
+  $accent: map.get($config, accent);
+  $foreground: map.get($config, foreground);
+  $background: map.get($config, background);
 
   .home {
-    background-color: mat-color($background);
+    background-color: mat.get-color-from-palette($background);
   }
 
   .home__output {
-    background-color: mat-color($primary, 50);
-    color: mat-color($primary, '50-contrast');
+    background-color: mat.get-color-from-palette($primary, 50);
+    color: mat.get-color-from-palette($primary, '50-contrast');
+  }
+
+  .home__copyButton {
+    background-color: mat.get-color-from-palette($primary);
+
+    mat-icon {
+      color: mat.get-contrast-color-from-palette($primary, 500);
+    }
   }
 }
 
 @mixin home-theme($theme) {
-  $color: mat-get-color-config($theme);
-  $typography: mat-get-typography-config($theme);
+  $color: mat.get-color-config($theme);
+  $typography: mat.get-color-config($theme);
 
   @if $color != null {
     @include home-color($color);
